@@ -14,20 +14,22 @@
     <header>
     <div>
                     <nav class="navbar navbar-expand-lg menu">
-                    <a class="nav-link liga" href="index.php">INICIO</a>
+                    <a class="navbar-brand" href="mostrar_paciente.php">
+                    <img src="img/Iconos/user_naranja.png" width="40" height="40" alt=""></a>
+                    <a class="nav-link liga"href="sesion_iniciada.php">INICIO</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                       <div class="navbar-nav">
-                      <a class="nav-link disabled">CITAS</a>
-                      <a class="nav-link disabled">CONTACTO</a>
+                      <a class="nav-link liga" href="crear_citas.php" >CITAS</a>
+                      <a class="nav-link disable">CONTACTO</a>
                       
                       </div>
                     </div>
                     <form class="form-inline">
-                    <a class="btn btn-outline-success" href="inicio_sesion.php">Iniciar sesion</a>
-                    <a class="btn btn-outline-success" href="eleccion.php">Registrarse</a>
+                    <a class="btn btn-outline-success" href="index.php">Cerrar Sesion</a>
+
                       </form>
                   </nav>
                   </div>

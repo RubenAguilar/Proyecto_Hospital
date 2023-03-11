@@ -18,6 +18,6 @@
     <a class="btn btn-outline-success" href="registro_paciente.php">Paciente</a>
 
 </main>
-    
+
 </body>
 </html>

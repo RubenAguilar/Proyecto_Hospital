@@ -13,16 +13,16 @@
 <body>
 <header>
      
-     <div class="menu">
-                     <nav class="navbar navbar-expand-lg navbar-dark bg-dark menu">
-                     <a class="nav-link active" href="index.php">INICIO</a>
+     <div>
+                     <nav class="navbar navbar-expand-lg menu">
+                     <a class="nav-link liga" href="index.php">INICIO</a>
                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                        <span class="navbar-toggler-icon"></span>
                      </button>
                      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                        <div class="navbar-nav">
                        <a class="nav-link disabled">CITAS</a>
-                       <a class="nav-link active" href="Contacto.php">CONTACTO</a>
+                       <a href="sesion_contacto.php" class="nav-link liga"  >CONTACTO</a>
                        
                        </div>
                      </div>
@@ -63,7 +63,7 @@
                         
                         </form>
                         <br>
-                                <a href="#" class="btn btn-primary">Registrarte</a>
+                                <a href="sesion_iniciada.php" class="btn btn-primary">Registrarte</a>
                             </div>
                             </div>
                             </div>

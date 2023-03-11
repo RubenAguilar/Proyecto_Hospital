@@ -1,6 +1,7 @@
 
 .menu{
     margin-top: 0%;
+    background-color: #0e3746;
 }
 
 .tittle_c{
@@ -10,3 +11,53 @@
 .pregunta{
     text-align: center;
 }
+
+.liga{
+    
+    color: white;
+    text-decoration: none;
+    
+}
+.liga:hover{
+    color: #eae8dc;
+    text-decoration: none;
+    
+}
+footer{
+    margin-top: 4rem;
+    background-color: #0e3746;
+    color: #eae8dc;
+    margin-bottom: 0%;
+}
+.body_index{
+    background-color: #eae8dc;
+}
+.info_bienvenida{
+    margin-top: 3rem;
+}
+.text_bienvenida{
+    text-align: justify;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+/* Pagina perfil  */
+.carta_perfil{
+    margin-top: 3rem;
+}
+
+/* termina pagina perfil */
+
+/*  Mostrar paciente */
+.btn_modal_paciente{
+    margin-top: 5rem;
+    
+}
+
+
+/* termina mostrar paciente */
+
+/*  Mostrar/crear cita */
+.tabla_citas{
+    margin-top: 1rem;
+}
+/*  fin mostrar/crear cita */
