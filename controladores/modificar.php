@@ -1,19 +1,20 @@
 <?php
 
-if (!empty($_POST["btnregistrar"])) {
-    if (!empty($_POST["Nombre"]) and !empty($_POST["usuario"]) and !empty($_POST["Telefonop"]) and !empty($_POST["contrasenap"])) {
-        
-        $ID=$_POST["ID"]; 
-        $Nombre=$_POST["Nombre"];
-        $Email=$_POST["usuario"];
-        $Telefono=$_POST["Telefonop"];
-        $Descripcion=$_POST["contrasenap"];
 
-        $sql=$conexion->query(" UPDATE practica set Nombre='$Nombre', usuario='$usuario', Telefono=$Telefonop, contrasenap='$contrasenap'  where ID=$ID");
+if (!empty($_POST["btnmodificar"])) {
+    if (!empty($_POST["Nombre"]) and !empty($_POST["usuario"]) and !empty($_POST["Telefonop"]) ) {
+        
+     
+        $Nombre=$_POST["Nombre"];
+        $usuario=$_POST["usuario"];
+        $Telefonop=$_POST["Telefonop"];
+        
+
+        $sql=$conexion->query("UPDATE pacientes set Nombre='$Nombre', usuario='$usuario', Telefonop=$Telefonop   where ID='$_SESSION[ID]'");
         if ($sql==1) {
-            header("location:../mostrar_paciente.php");
+            header("location: mostrar_paciente.php");
         } else {
-            echo "<div class='alert alert-danger'>Error al modificar producto</div>";
+            echo "<div class='alert alert-danger'>Error al modificar el perfil.</div>";
         }
         
     }else{

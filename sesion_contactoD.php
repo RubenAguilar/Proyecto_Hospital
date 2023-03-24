@@ -16,19 +16,19 @@
                     <nav class="navbar navbar-expand-lg menu">
                     <a class="navbar-brand" href="mostrar_doctor.php">
                     <img src="img/Iconos/user_naranja.png" width="40" height="40" alt=""></a>
-                    <a class="nav-link liga"href="Inicio_D.php">INICIO</a>
+                    <a class="nav-link liga"href="inicio_D.php">INICIO</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                       <div class="navbar-nav">
-                      <a class="nav-link liga" href="" >CITAS</a>
+                      <a class="nav-link liga" href="mostrar_citasD.php" >CITAS</a>
                       <a class="nav-link disabled">CONTACTO</a>
                       
                       </div>
                     </div>
                     <form class="form-inline">
-                    <a class="btn btn-outline-success" href="home.php">Cerrar Sesion</a>
+                    <a class="btn btn-outline-warning" href="home.php">Cerrar Sesion</a>
 
                       </form>
                   </nav>

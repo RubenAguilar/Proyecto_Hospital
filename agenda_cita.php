@@ -2,6 +2,7 @@
 session_start();
 include 'conexion.php';
 include 'Alta_cita.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,8 +25,15 @@ include 'Alta_cita.php';
   <h5 class="card-header">INICIA SESION</h5>
   <div class="card-body">
   <form method="POST" >
-
-  <form action="Alta_cita.php" method="POST">
+  <?php
+       include "conexion.php";
+       include 'controladores/modificarD.php';
+      $sql=$conexion->query("SELECT * from pacientes where ID='$_SESSION[ID]' ");
+      while($valor=$sql->fetch_object()) { ?>
+  <form action="<?php  $_SESSION['usuario'];   ?>" method="POST">
+  
+        
+      
           <div class="row">
             <div class="col">
             <label for="inputFecha">Fecha</label>
@@ -35,10 +43,22 @@ include 'Alta_cita.php';
             <label for="inputHora">Hora</label>
             <input type="time" class="form-control" name="horita"id="horita">
             </div>
+        
+            <input hidden type="text" class="form-control" id="patient" name="patient" value="<?= $valor->usuario ?>">
+          </div>
+         
+          <?php }
+         ?>
+          <br>
+          <div class="row">
+            <div class="col">
+              <button type="submit" value="Guardar" name="btniniciar" class="btn btn-primary">Enviar</button>
+              <a class="btn btn-outline-danger"href="mostrar_citas.php">Cancelar</a>
+            </div>
+          
           </div>
        
-  <button type="submit" value="Guardar" name="btniniciar" class="btn btn-primary">Enviar</button>
-  <a class="btn btn-outline-danger"href="crear_citas.php">Cancelar</a>
+
 </form>
   </div>
   </div>

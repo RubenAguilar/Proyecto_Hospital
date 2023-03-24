@@ -35,7 +35,7 @@ $myInsert ->execute(
 );
 
   // Redireccionamos a consulta
-    header('Location: inicia_sesion.php');
+    header('Location: ../inicia_sesion.php');
 
 }
 

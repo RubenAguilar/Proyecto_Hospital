@@ -33,7 +33,7 @@ if (empty($_SESSION["ID"])){
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                   <div class="navbar-nav">
-                  <a class="nav-link liga" href="crear_citas.php">CITAS</a>
+                  <a class="nav-link liga" href="mostrar_citas.php">CITAS</a>
                   <a class="nav-link liga" href="sesion_contacto.php">CONTACTO</a>
                   
                   </div>

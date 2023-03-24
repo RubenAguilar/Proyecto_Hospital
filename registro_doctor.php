@@ -1,5 +1,5 @@
 <?php 
-  include "Alta_doctor.php";
+  include "controladore/Alta_doctor.php";
 
 ?>
 <!DOCTYPE html>
@@ -19,19 +19,19 @@
      
      <div>
                      <nav class="navbar navbar-expand-lg menu">
-                     <a class="nav-link liga" href="home.php">INICIO</a>
+                     <a class="nav-link liga" href="../home.php">INICIO</a>
                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                        <span class="navbar-toggler-icon"></span>
                      </button>
                      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                        <div class="navbar-nav">
                        <a class="nav-link disabled">CITAS</a>
-                       <a class="nav-link liga" href="contacto.php">CONTACTO</a>
+                       <a class="nav-link liga" href="../contacto.php">CONTACTO</a>
                        
                        </div>
                      </div>
                      <form class="form-inline">
-                     <a class="btn btn-outline-success" href="inicio_sesion.php">Iniciar sesion</a>
+                     <a class="btn btn-outline-success" href="formularios/inicia_sesion.php">Iniciar sesion</a>
                      
                        </form>
                    </nav>

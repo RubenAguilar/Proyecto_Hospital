@@ -1,7 +1,5 @@
 <?php
 
-include "conexion.php";
-
 session_start();
 
 ?>
@@ -32,33 +30,38 @@ session_start();
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                   <div class="navbar-nav">
-                  <a class="nav-link liga" href="crear_citas.php">CITAS</a>
+                  <a class="nav-link liga" href="mostrar_citas.php">CITAS</a>
                   <a class="nav-link liga" href="sesion_contacto.php">CONTACTO</a>
                   
                   </div>
                 </div>
                 <form class="form-inline">
-                <a class="btn btn-outline-warning" href="controladores/logout.php"> Cerrar sesion</a>
+                <a class="btn btn-outline-warning" href="controladores/logout.php"> Cerrar Sesion</a>
                 
                   </form>
               </nav>
               </div>
       </header>
       <main>
-      <form class="col-4 p-3 m-auto" method="POST">
-         <h3 class="text-center text-secondary">Modificar </h3>
-         <input type="hidden" name="usuario" value="<?= $_GET["usuario"]?>">
+     
+      
+      <form class="col-4 p-3 m-auto"  method="POST">
+         <h3 class="text-center text-dark">Modificar perfil </h3>
+         <input type="hidden" name="usuario" value="<?= $_GET[$_SESSION['usuario']]?>">
          <?php
-         include "controladores/modificar.php";
-         while ($valor=$sql->fetch_object()) {?>
+       include "conexion.php";
+       include 'controladores/modificar.php';
+      $sql=$conexion->query("SELECT * from pacientes where patient='$_SESSION[usuario]' ");
+      while($valor=$sql->fetch_object()) { ?>
+
          <div class="mb-3">
              <label for="Nombre" class="form-label">Nombre</label>
              <input type="text" class="form-control" id="Nombre" name="Nombre" value="<?= $valor->Nombre ?>">
          </div>
 
          <div class="mb-3">
-             <label for="Email" class="form-label">Email</label>
-             <input type="Email" class="form-control" id="usuario" name="usuario" value="<?= $valor->usuario ?>">
+             <label for="usuario" class="form-label">Usuario:</label>
+             <input type="text" class="form-control" id="usuario" name="usuario" value="<?= $valor->usuario ?>">
          </div>
 
          <div class="mb-3">
@@ -66,18 +69,20 @@ session_start();
              <input type="number" class="form-control" id="Telefonop" name="Telefonop" value="<?= $valor->Telefonop ?>">
          </div>
 
+         
+       
+
         
          <?php }
          ?>
-         
-
-         <button type="submit" class="btn btn-primary" name="btnregistrar" value="ok">Modificar</button>
+         <button type="submit" class="btn btn-primary" name="btnmodificar" value="ok">Modificar</button>
+        <a class="btn btn-secondary" href="mostrar_paciente.php">Atras</a>
      </form>
 
-
+    
       </main>
       <footer>
-        <div class="container">
+        <div class="container pies">
         <br>
             <section class="row" >
                 <section class="col-4">

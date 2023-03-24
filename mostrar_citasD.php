@@ -20,21 +20,21 @@ include "Alta_cita";
 
 <div>
         <nav class="navbar navbar-expand-lg menu">
-        <a class="navbar-brand" href="mostrar_paciente.php">
+        <a class="navbar-brand" href="mostrar_doctor.php">
         <img src="img/iconos/user_naranja.png" width="40" height="40" alt=""></a>
-        <a class="nav-link liga"href="inicio_P.php">INICIO</a>
+        <a class="nav-link liga"href="inicio_D.php">INICIO</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-        <a class="nav-link disabled" href="crear_citas.php">CITAS</a>
-        <a class="nav-link liga" href="sesion_contacto.php">CONTACTO</a>
+        <a class="nav-link disabled" href="mostrar_citasD.php">CITAS</a>
+        <a class="nav-link liga" href="sesion_contactoD.php">CONTACTO</a>
 
         </div>
         </div>
         <form class="form-inline">
-        <a class="btn btn-outline-warning" href="controladores/logout.php"> Cerrar sesion</a>
+        <a class="btn btn-outline-warning" href="controladores/logout.php"> Cerrar Sesion</a>
         </form>
         </nav>
 </div>
@@ -56,6 +56,7 @@ include "Alta_cita";
 <th  scope="col">ID</th>
   <th scope="col">Fecha</th>
   <th scope="col">Hora</th>
+  <th scope="col">Paciente</th>
   <th scope="col">Opciones</th>
   
 </tr>
@@ -64,16 +65,18 @@ include "Alta_cita";
                 <?php
                 include "conexion.php";
                include "controladores/funcion_eliminar.php";
-                $sql=$conexion->query("SELECT * from citap");
+                $sql=$conexion->query("SELECT * from citap ");
+                
                 while($valor=$sql->fetch_object()) { ?>
                     <tr>
                      <td ><?= $valor-> id_c ?></td>
                      <td><?= $valor-> fechita ?></td>
                      <td><?= $valor-> horita ?></td>
+                     <td><?= $valor-> patient?></td>
                   
                      <td>
-                         <a href="modificar.php?ID=<?= $valor->id_c ?>" class="btn btn-outline-primary">Editar</a>
-                         <a onclick="return eliminar()" href="crear_citas.php?id_c=<?= $valor->id_c ?>" class="btn btn-outline-danger">Eliminar</a>
+                         <a href="modificar.php?id_c=<?= $valor->id_c ?>" class="btn btn-outline-primary">Editar</a>
+                         <a onclick="return eliminar()" href="mostrar_citasD.php?id_c=<?= $valor->id_c ?>" class="btn btn-outline-danger">Eliminar</a>
                          
                      </td>
                  </tr>
@@ -85,16 +88,7 @@ include "Alta_cita";
 </div>
 </div>
 </div>
-<div class="container">
-  <div class="row">
-      <div class="col-11">
-           
-      </div>
-                
-        <div class="col-1">
-              <!-- Button trigger modal Agendar -->
-              <a type="button" href="agenda_cita.php">  <img src="img/Iconos/add.png" ></a>
-        </div>
+
   </div>
 </div>
 

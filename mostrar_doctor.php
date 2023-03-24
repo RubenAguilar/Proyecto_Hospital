@@ -31,7 +31,7 @@ include "controladores/funcion_eliminarD.php";
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                   <div class="navbar-nav">
-                  <a class="nav-link disabled" href="#">CITAS</a>
+                  <a class="nav-link liga" href="mostrar_citasD.php">CITAS</a>
                   <a class="nav-link liga" href="sesion_contactoD.php" style='text-decoration:none;'>CONTACTO</a>
                   
                   </div>
@@ -80,7 +80,7 @@ include "controladores/funcion_eliminarD.php";
                                              
                                     <div class="btn_modal_paciente">
                                                        
-                                            <a class="btn btn-outline-primary" href="#.php"> Editar</a>
+                                            <a class="btn btn-outline-primary" href="editar_doctor.php"> Editar</a>
                                          
                                      <a onclick="return eliminar()" href="?id_d=<?= $valor->id_d ?>" class="btn btn-outline-danger">Eliminar</a>
                                       </div>       

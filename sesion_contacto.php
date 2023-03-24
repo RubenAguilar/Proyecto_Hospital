@@ -22,13 +22,13 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                       <div class="navbar-nav">
-                      <a class="nav-link liga" href="crear_citas.php" >CITAS</a>
+                      <a class="nav-link liga" href="mostrar_citas.php" >CITAS</a>
                       <a class="nav-link disabled">CONTACTO</a>
                       
                       </div>
                     </div>
                     <form class="form-inline">
-                    <a class="btn btn-outline-success" href="home.php">Cerrar Sesion</a>
+                    <a class="btn btn-outline-warning" href="home.php">Cerrar Sesion</a>
 
                       </form>
                   </nav>

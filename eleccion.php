@@ -43,7 +43,7 @@
                     <img src="img/iconos/doc_icon.png" class="card-img-top" alt="Es el icono de doctor">
                     <div class="card-body">
                         <p class="card-text">En caso de ser docotor haga click aqui abajo.</p>
-                        <a class="btn btn-outline-success" href="registro_doctor.php">Doctor</a>    
+                        <a class="btn btn-outline-success" href="formularios/registro_doctor.php">Doctor</a>    
                     </div>
                     </div>
                 </div>

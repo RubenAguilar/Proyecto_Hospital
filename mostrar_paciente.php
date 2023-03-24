@@ -32,7 +32,7 @@ include "controladores/funcion_eliminarP.php";
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                   <div class="navbar-nav">
-                  <a class="nav-link liga" href="crear_citas.php">CITAS</a>
+                  <a class="nav-link liga" href="mostrar_citas.php">CITAS</a>
                   <a class="nav-link liga" href="sesion_contacto.php" style='text-decoration:none;'>CONTACTO</a>
                   
                   </div>
@@ -82,23 +82,23 @@ include "controladores/funcion_eliminarP.php";
            
             
                                              
-                                    <div class="btn_modal_paciente">
-                                                       
-                                            <a class="btn btn-outline-primary" href="editar_paciente.php"> Editar</a>
-                                            <a onclick="return eliminar()" href="?ID=<?= $valor->ID ?>" class="btn btn-outline-danger">Eliminar</a>
+        <div class="btn_modal_paciente">
+            
+        <a class="btn btn-outline-primary" href="editar_paciente.php"> Editar</a>
+        <a onclick="return eliminar()" href="?ID=<?= $valor->ID ?>" class="btn btn-outline-danger">Eliminar</a>
 
-                                                        
-              
-                                      </div>       
-                                    
-                                      <?php } ?> 
+            
 
-                                      
-                            </div>
-                            </div>
-                            </div>
-                            <div class="col-2"></div>
-                       </div>
+        </div>       
+
+        <?php } ?> 
+
+                  
+        </div>
+        </div>
+        </div>
+        <div class="col-2"></div>
+    </div>
                        
                                         
 

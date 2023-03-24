@@ -32,13 +32,13 @@ if (empty($_SESSION["id_d"])){
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                   <div class="navbar-nav">
-                  <a class="nav-link liga" href="#">CITAS</a>
+                  <a class="nav-link liga" href="mostrar_citasD.php">CITAS</a>
                   <a class="nav-link liga" href="sesion_contactoD.php">CONTACTO</a>
                   
                   </div>
                 </div>
                 <form class="form-inline">
-                <a class="btn btn-outline-warning" href="controladores/logout.php"> Cerrar sesion</a>
+                <a class="btn btn-outline-warning" href="controladores/logout.php"> Cerrar Sesion</a>
                 
                   </form>
               </nav>

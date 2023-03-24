@@ -43,12 +43,19 @@ color: white;
     text-decoration: none;
     
 }
+
 .liga:hover{
     color: #eae8dc;
     text-decoration: none;
     
 }
 footer{
+    margin-top: 4rem;
+    background-color: #0e3746;
+    color: #eae8dc;
+    margin-bottom: 0%;
+}
+.pies{
     margin-top: 4rem;
     background-color: #0e3746;
     color: #eae8dc;
@@ -83,6 +90,7 @@ footer{
     
     
 }
+
 
 /* termina pagina perfil */
 /*Inputs*/
