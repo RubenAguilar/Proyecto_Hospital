@@ -2,7 +2,7 @@
 
 session_start();
 
-include "controladores/funcion_eliminarP.php";
+include "../controladores/funcion_eliminarP.php";
 
 ?>
 <!doctype html>
@@ -11,7 +11,7 @@ include "controladores/funcion_eliminarP.php";
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="css/Style.css">
+    <link rel="stylesheet" href="../css/Style.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -25,8 +25,8 @@ include "controladores/funcion_eliminarP.php";
 <div>
                 <nav class="navbar navbar-expand-lg  menu">
                 <a class="navbar-brand" href="#">
-                <img src="img/iconos/user_naranja.png" width="40" height="40" alt=""></a>
-                <a class="nav-link liga"href="Inicio_P.php">INICIO</a>
+                <img src="../img/iconos/user_naranja.png" width="40" height="40" alt=""></a>
+                <a class="nav-link liga"href="../Inicio_P.php">INICIO</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
@@ -38,15 +38,15 @@ include "controladores/funcion_eliminarP.php";
                   </div>
                 </div>
                 <form class="form-inline">
-                <a class="btn btn-outline-warning" href="controladores/logout.php"> Cerrar sesion</a>
+                <a class="btn btn-outline-warning" href="../controladores/logout.php"> Cerrar sesion</a>
                   </form>
               </nav>
               </div>
       </header>
          <main>
          <?php
-    include "conexion.php";
-    include "controladores/funcion_eliminarP.php";
+    include "../controladores/conexion.php";
+    include "../controladores/funcion_eliminarP.php";
     ?>
             <div class="container">
               <div class="row">
@@ -69,7 +69,7 @@ include "controladores/funcion_eliminarP.php";
                             <div class="card-body card_cuerpo">
                              
     <?php
-       include "conexion.php";
+       include "../controladores/conexion.php";
      
       $sql=$conexion->query("SELECT * from pacientes where ID='$_SESSION[ID]' ");
       while($valor=$sql->fetch_object()) { ?>
@@ -84,7 +84,7 @@ include "controladores/funcion_eliminarP.php";
                                              
         <div class="btn_modal_paciente">
             
-        <a class="btn btn-outline-primary" href="editar_paciente.php"> Editar</a>
+        <a class="btn btn-outline-primary" href="../formularios/editar_paciente.php"> Editar</a>
         <a onclick="return eliminar()" href="?ID=<?= $valor->ID ?>" class="btn btn-outline-danger">Eliminar</a>
 
             
@@ -116,11 +116,11 @@ include "controladores/funcion_eliminarP.php";
                     </section>
                     <section class="col-8">
                         <h2>Síguenos</h2>
-                        <img src="img/Redes_sociales/Dakirby309-Simply-Styled-YouTube.24.png" alt="">
-                        <img src="img/Redes_sociales/instagram.png" height="20"width="20"alt="">
-                        <img src="img/Redes_sociales/Limav-Flat-Gradient-Social-Linkedin.24.png" alt="">
-                        <img src="img/Redes_sociales/Papirus-Team-Papirus-Apps-Gnome-twitch.24.png" alt="">
-                        <img src="img/Redes_sociales/Yootheme-Social-Bookmark-Social-facebook-box-blue.24.png" alt="">
+                        <img src="../img/Redes_sociales/Dakirby309-Simply-Styled-YouTube.24.png" alt="">
+                        <img src="../img/Redes_sociales/instagram.png" height="20"width="20"alt="">
+                        <img src="../img/Redes_sociales/Limav-Flat-Gradient-Social-Linkedin.24.png" alt="">
+                        <img src="../img/Redes_sociales/Papirus-Team-Papirus-Apps-Gnome-twitch.24.png" alt="">
+                        <img src="../img/Redes_sociales/Yootheme-Social-Bookmark-Social-facebook-box-blue.24.png" alt="">
                         <p>&copy; 2018 Politica de privacidad</p>
                     </section>
                     

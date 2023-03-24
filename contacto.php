@@ -28,8 +28,8 @@
                       </div>
                     </div>
                     <form class="form-inline">
-                    <a class="btn btn-outline-success" href="eleccion_i.php">Iniciar sesion</a>
-                    <a class="btn btn-outline-success" href="eleccion.php">Registrarse</a>
+                    <a class="btn btn-outline-success" href="../formularios/eleccion_i.php">Iniciar sesion</a>
+                    <a class="btn btn-outline-success" href="../formularios/eleccion.php">Registrarse</a>
                       </form>
                   </nav>
                   </div>
@@ -46,10 +46,10 @@
   <div class="card-body">
     <blockquote class="blockquote mb-0">
     <ul style="list-style: none;">
-        <li><img src="img/iconos/phone3.png"> 9811066498</li>
-        <li><img src="img/iconos/whatsapp.png"> 9811397737</li>
-        <li><img src="img/iconos/gmail.png"> correo_falso@gmail.com</li>
-        <li><img src="img/iconos/location.png"> Av.Falsa en la colonia falsa y calle falsa No.random</li>
+        <li><img src="../img/iconos/phone3.png"> 9811066498</li>
+        <li><img src="../img/iconos/whatsapp.png"> 9811397737</li>
+        <li><img src="../img/iconos/gmail.png"> correo_falso@gmail.com</li>
+        <li><img src="../img/iconos/location.png"> Av.Falsa en la colonia falsa y calle falsa No.random</li>
     </ul>
       
     </blockquote>

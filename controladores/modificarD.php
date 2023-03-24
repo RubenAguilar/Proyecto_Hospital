@@ -13,7 +13,7 @@ if (!empty($_POST["btneditar"])) {
 
         $sql=$conexion->query("UPDATE doctors set Doctor='$Doctor', user='$user', espe='$espe', cnum=$cnum  where id_d='$_SESSION[id_d]'");
         if ($sql==1) {
-            header("location: mostrar_doctor.php");
+            header("location: ../vistas/mostrar_doctor.php");
         } else {
             echo "<div class='alert alert-danger'>Error al modificar el perfil.</div>";
         }

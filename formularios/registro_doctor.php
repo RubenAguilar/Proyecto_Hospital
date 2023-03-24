@@ -1,5 +1,5 @@
 <?php 
-  include "controladore/Alta_doctor.php";
+  include "../controladores/Alta_doctor.php";
 
 ?>
 <!DOCTYPE html>
@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="css/Style.css">  
+<link rel="stylesheet" href="../css/Style.css">  
     <title>Registro Doctor</title>
 </head>
 <body>
@@ -31,7 +31,7 @@
                        </div>
                      </div>
                      <form class="form-inline">
-                     <a class="btn btn-outline-success" href="formularios/inicia_sesion.php">Iniciar sesion</a>
+                     <a class="btn btn-outline-success" href="inicia_sesion.php">Iniciar sesion</a>
                      
                        </form>
                    </nav>
@@ -39,8 +39,7 @@
            </header>
 
            <br>
-           <main>
-            <div class="container">
+           <div class="container">
                 <div class="row">
                     <div class="col-3"></div>
                     <div class="col-8">
@@ -50,33 +49,33 @@
                             <form action="Alta_doctor.php" method="POST">
                                 <div class="form-group">
                             <label for="exampleNombre">Nombre</label>
-                            <input type="text" class="form-control" id="Doctor" name="Doctor"aria-describedby="nombreHelp" placeholder="Escribe tu nombre completo." >
+                            <input type="text" class="form-control" id="Doctor" name="Doctor" pattern="[A-Za-z]+" aria-describedby="nombreHelp" placeholder="Escribe tu nombre completo." >
                             
                         </div>
                         <div class="form-group">
                             <label for="exampleUsuario">Usuario</label>
-                            <input type="text" class="form-control" id="user"name="user" aria-describedby="UsuarioHelp" placeholder="Escribe tu usuario" >
+                            <input type="text" class="form-control" id="user"name="user" aria-describedby="UsuarioHelp" pattern="[A-Za-z0-9_-]{1,1000000}" placeholder="Escribe tu usuario" >
                             
                         </div>      
     
 
                         <div class="form-group">
                             <label for="exampleEspecialidad">Especialidad</label>
-                            <input type="text" class="form-control" id="espe" name="espe" aria-describedby="EspecialidadHelp" >
+                            <input type="text" class="form-control" id="espe" name="espe" pattern="[A-Za-z]+" aria-describedby="EspecialidadHelp" >
                             
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Numero Consultorio</label>
-                            <input type="number" class="form-control" id="cnum"name="cnum" placeholder="000" >
+                            <input type="number" class="form-control" id="cnum"name="cnum" min="0" placeholder="000" >
                             
                         </div>
                         
                         <div class="form-group">
                             <label for="exampleInputPassword1">Contraseña</label>
-                            <input type="password" class="form-control" id="contrasenad" name="contrasenad"placeholder="Contraseña">
+                            <input type="password" class="form-control" id="contrasenad" pattern="[A-Za-z0-9_-]{1,1000000}" name="contrasenad"placeholder="Contraseña">
                         </div>
                         <button type="submit" value="Guardar" name="btnregistrar" class="btn btn-primary">Registrarte</button>
-                        <a class="btn btn-outline-danger"href="home.php">Cancelar</a>
+                        <a class="btn btn-outline-danger"href="../home.php">Cancelar</a>
                             </div>
                         </form>
                         <br>

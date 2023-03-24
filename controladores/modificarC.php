@@ -13,7 +13,7 @@ if (!empty($_POST["btneditarcita"])) {
 
         $sql=$conexion->query("UPDATE citap set fechita='$fechita', horita='$horita' where id_c=$id_c");
         if ($sql==1) {
-            header("location: mostrar_citas.php");
+            header("location: ../vistas/mostrar_citas.php");
         } else {
             echo "<div class='alert alert-danger'>Error al modificar la cita.</div>";
         }

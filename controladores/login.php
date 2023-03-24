@@ -12,7 +12,7 @@ if (!empty($_POST["btniniciar"])) {
             $_SESSION["ID"]=$valor->ID;
             $_SESSION["usuario"]=$valor->usuario;
             $_SESSION["contrasenap"]=$valor ->contrasenap;
-            header("location: Inicio_P.php");
+            header("location: ../vistas/Inicio_P.php");
             
         } else {
             echo "<div class='alert alert-danger'>Acceso denegado</div>";

@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'conexion.php';
+include '../controladores/conexion.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +11,7 @@ include 'conexion.php';
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/Style.css">
+    <link rel="stylesheet" href="../css/Style.css">
     <title>Inicio de sesion</title>
 </head>
 <body>
@@ -26,15 +26,15 @@ include 'conexion.php';
 
   <div class="form-group">
           <?php
-          include "controladores/login.php";
+          include "../controladores/login.php";
           ?> 
       <br>
     <label for="inputAddress">Usuario</label>
-    <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Ingresa tu usuario">
+    <input type="text" class="form-control" id="usuario" name="usuario" pattern="[A-Za-z0-9-]{1,1000000}" placeholder="Ingresa tu usuario">
   </div>
   <div class="form-group">
     <label for="inputAddress2">Contraseña</label>
-    <input type="password" class="form-control" id="contrasenap" name="contrasenap" placeholder="Ingresa tu contraseña">
+    <input type="password" class="form-control" id="contrasenap" pattern="[A-Za-z0-9-]{1,1000000}" name="contrasenap" placeholder="Ingresa tu contraseña">
   </div>
   <button type="submit" value="Guardar" name="btniniciar" class="btn btn-primary">Enviar</button>
   <a class="btn btn-outline-danger"href="eleccion_i.php">Cancelar</a>

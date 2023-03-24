@@ -36,7 +36,7 @@ $myInsert ->execute(
 );
 
   // Redireccionamos a consulta
-    header('Location: ../mostrar_citas.php');
+    header('Location: ../vistas/mostrar_citas.php');
 
 }
 

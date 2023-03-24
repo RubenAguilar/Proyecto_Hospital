@@ -12,7 +12,7 @@ if (!empty($_POST["btniniciard"])) {
             $_SESSION["id_d"]=$valor->id_d;
             $_SESSION["user"]=$valor->user;
             $_SESSION["contrasenad"]=$valor ->contrasenad;
-            header("location: Inicio_D.php");
+            header("location: ../vistas/Inicio_D.php");
             
         } else {
             echo "<div class='alert alert-danger'>Acceso denegado</div>";

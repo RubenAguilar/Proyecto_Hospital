@@ -1,7 +1,7 @@
 body{
     
     background-image: url(https://static.vecteezy.com/system/resources/previews/002/783/363/non_2x/blur-hospital-background-free-photo.jpg);
-
+    background-repeat: no-repeat;
 }
 .card{
     margin-top: 10rem;
